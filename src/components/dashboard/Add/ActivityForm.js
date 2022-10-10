@@ -16,7 +16,6 @@ const ActivityForm = (props) => {
   };
 
   const dateChangeHandler = (e) => {
-    console.log(e.target.value);
     setEnteredDate(e.target.value);
   };
 
