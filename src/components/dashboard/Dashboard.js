@@ -32,11 +32,18 @@ const DUMMY__ACTIVITIES = [
 
 const Dashboard = () => {
   const [activities, setActivities] = useState(DUMMY__ACTIVITIES);
-  const { displayChart, displayForm, displayTotal } =
-    useContext(DisplayContext);
+  const { displayChart, displayForm, displayTotal } = useContext(DisplayContext);
+
+
+  // eslint-disable-next-line no-extend-native
+  Date.prototype.addHours = function (h) {
+    this.setTime(this.getTime() + (h * 60 * 60 * 1000));
+    return this;
+  }
 
   const addActivityHandler = (activity) => {
     setActivities((prevActivity) => {
+      activity.date.addHours(5);
       return [activity, ...prevActivity];
     });
   };
@@ -50,6 +57,7 @@ const Dashboard = () => {
       />
       <Activities displayComponent={displayChart} items={activities} />
       <ActivityTotal displayComponent={displayTotal} items={activities} />
+      <button onClick={() => console.log(activities)}>console.acitiies</button>
     </main>
   );
 };
