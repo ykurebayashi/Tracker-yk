@@ -57,7 +57,6 @@ const Dashboard = () => {
       />
       <Activities displayComponent={displayChart} items={activities} />
       <ActivityTotal displayComponent={displayTotal} items={activities} />
-      <button onClick={() => console.log(activities)}>console.acitiies</button>
     </main>
   );
 };
