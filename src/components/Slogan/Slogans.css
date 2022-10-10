@@ -1,0 +1,39 @@
+.slogan {
+  display: none;
+}
+
+@media (min-width: 62rem) {
+  .slogan {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .slogan-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100px;
+  }
+
+  .card-1 {
+    background-color: rgb(1, 186, 242, 0.6);
+  }
+
+  .card-2 {
+    background-color: rgb(1, 186, 242, 0.8);
+  }
+
+  .card-3 {
+    background-color: #01baf2;
+  }
+
+  .slogan-card__text {
+    line-height: 0;
+    white-space: nowrap;
+    color: #fff;
+    font-weight: 700;
+    font-size: 10rem;
+    transform: rotate(90deg);
+  }
+}

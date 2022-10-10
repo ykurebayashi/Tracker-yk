@@ -1,0 +1,18 @@
+.activity-date {
+  padding-block: 0.5rem;
+  padding-inline: 3rem;
+  line-height: 1.3;
+  text-align: center;
+  background-color: #ececec;
+  border-radius: 5px;
+}
+
+.activity-date__month,
+.activity-date__year {
+  font-weight: 500;
+}
+
+.activity-date__day {
+  font-weight: 700;
+  font-size: 2.5rem;
+}

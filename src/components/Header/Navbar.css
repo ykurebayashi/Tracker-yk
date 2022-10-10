@@ -1,0 +1,66 @@
+.navbar {
+  position: fixed;
+  bottom: 1.5rem;
+  width: 100%;
+  z-index: 2;
+}
+
+.navbar .container {
+  padding-block: 0.8rem;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 15px 2px rgb(0, 0, 0, 0.15);
+}
+
+.container > .icon {
+  display: flex;
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.icon__add {
+  padding: 0.8rem;
+  background-color: #01baf2;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 1px #0388b165;
+}
+
+.icon__add ion-icon {
+  font-size: 4rem;
+  color: #fff;
+}
+
+:is(.icon__add):is(:hover, :focus) {
+  transform: scale(1.1);
+}
+
+:is(.icon__chart ion-icon, .icon__goal ion-icon) {
+  font-size: 3rem;
+  color: rgb(145, 145, 145, 0.6);
+  transition: 0.15s ease-in-out;
+}
+
+:is(.icon__chart ion-icon, .icon__goal ion-icon):is(:hover, :focus) {
+  color: #919191;
+  transform: scale(1.2);
+}
+
+@media (min-width: 62rem) {
+  .navbar {
+    all: unset;
+  }
+
+  .navbar .container {
+    padding-inline: 1.5rem;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .icon__add {
+    padding: 2rem;
+  }
+
+  :is(.icon__chart ion-icon, .icon__goal ion-icon) {
+    font-size: 4rem;
+  }
+}
